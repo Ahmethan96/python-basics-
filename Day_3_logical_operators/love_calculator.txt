@@ -1,0 +1,26 @@
+DATE: 21/11/2021 
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+print("Welcome to the Love Calculator!")
+name = input("please entre a name: ")
+name2 = input("please entre their name: ")
+fir_true = name.count("t") + name.count("r") + name.count("u") + name.count("e")
+fir_love = name.count("l") + name.count("o") + name.count("v") + name.count("e")
+sec_true = name2.count("t") + name2.count("r") + name2.count("u") + name2.count("e")
+sec_love = name2.count("l") + name2.count("o") + name2.count("v") + name2.count("e")
+x = fir_true + sec_true
+y = fir_love + sec_love
+x1 = str(x)
+y1 = str(y)
+tot = str(x1+y1) # because it is str we can not write str(x1,y1)
+print(type(tot))
+tot1 = int(tot) # converting it again from str to int in order to be able to use it in the if/elif/else statmesnts 
+if tot1 < 10 or tot1 > 90:
+    print(f"your score is {tot1}, you go together like coke and mentos.")
+elif tot1 >= 40 and tot1 <= 50:
+    print(f"your score is {tot1}, you are alright together")
+else:
+    print(f"your score is {tot1}")

@@ -1,0 +1,28 @@
+Date 12/25/2021 
+ write a program that checks the given number is a prime number or not 
+
+/////////////////////////////////////////////////////////////////////////////////////
+my solution
+////////////////////////////////////////////////////////////////////////////////////
+
+def prime_number(n):
+
+    if n != 2 and n % 2 == 0:
+            print("the number is not a prime number")
+    elif n != 3 and n % 3 == 0:
+            print("the number is not a prime number")
+    elif n != 5 and n % 5 == 0:
+            print("the number is not a prime number")
+    elif n != 7 and n % 7 == 0:
+            print(" the number is not a prime number")
+    elif n == 2:
+            print("the number you entred is a prime number")
+    else:
+            print(" the number you entred is a prime number")
+
+prime_number(17)
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+another solution
+//////////////////////////////////////////////////////////////////////////////////////

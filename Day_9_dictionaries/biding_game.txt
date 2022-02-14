@@ -1,0 +1,28 @@
+Date: 21/01/2022 
+
+
+dic = {}
+x = input("what is your name: ")
+y = int(input("what is your bid?: "))
+dic[x] = y
+
+flag = True
+while flag:
+    w = input("Are there any other bidders? Type 'yes' or 'no'. ")
+    if w == "yes":
+        flag = True
+        x = input("what is your name: ")
+        y = int(input("what is your bid? "))
+        dic[x] = y
+    elif w == "no":
+        flag = False
+
+# {'ibo': 250, 'sue': 300, 'apo': 350}
+dic2 = {}
+value = 0
+name = ""
+for key in dic:
+    if dic[key] > value:
+        value = dic[key]
+        name = key
+print(f"the highest bid value is {value} and the person is {name}")

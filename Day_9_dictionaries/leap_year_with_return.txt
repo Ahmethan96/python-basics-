@@ -1,0 +1,76 @@
+import random
+def game():
+    lis = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    my_cards = []
+    computer_card = []
+    def message():
+        print("you lose ")
+    # def me():
+    #     y = 0
+    #     for i in range(2):
+    #         x = random.choice(lis)
+    #         my_cards.append(x)
+    #         y += my_cards[i]
+    #             # print(y)
+    #     print(f"your cards: {my_cards}, current score: {y}")
+    #     print(type(y))
+    #     return y
+    def new():
+        a = 0
+        flag = True
+        for i in range(2):
+            x = random.choice(lis)
+            my_cards.append(x)
+            a += my_cards[i]
+            print(f"your cards: {my_cards}, current score: {a}")
+        while flag:
+            w = input("Type 'y' to get another card, type 'n' to pass: ")
+            if w == "y":
+                a = 0
+                z = random.choice(lis)
+                my_cards.append(z)
+                for j in range(len(my_cards)):
+                    a += my_cards[j]
+
+                print(f"your score is {a}")
+                print(my_cards)
+
+            elif w == "n":
+                flag = False
+        return a
+    def computer():
+        m = 0
+        for i in range(2):
+            b = random.choice(lis)
+            computer_card.append(b)
+            m += computer_card[i]
+        print(f"computer's score is {m}")
+        print(f"computer's first card is {computer_card[0]}")
+        return m
+    def compare():
+        if me_second_output > 21:
+            print("you lose ")
+        elif computer > 21:
+            print("you win! ")
+        elif me_second_output > computer:
+            print("you win! ")
+        elif me_second_output < computer:
+            print("you lose! ")
+        elif me_second_output == computer:
+            print("you are equal! ")
+
+        else:
+            print("game over! ")
+
+    # ibo = me()
+    computer = computer()
+    calc = new()
+    me_second_output = calc
+    comp = compare()
+    me_second_output
+    print(my_cards)
+x = input("do you want to play black jack? type y or n ")
+if x == "y":
+    game()
+else:
+    print("thank you!")

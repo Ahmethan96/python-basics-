@@ -1,0 +1,48 @@
+Date: 07/12/2021 
+
+You are going to write a program that calculates the highest score from a List of scores.
+
+e.g. student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+
+Important you are not allowed to use the max or min functions. The output words must match the example. i.e
+
+The highest score in the class is: x
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+l = len(student_scores)
+count = 0
+for i in range(1,l):
+    if student_scores[i] > student_scores[count]:
+        max = student_scores[i]
+        # student_scores[count] = student_scores[i]
+        count = count + 1
+
+    elif student_scores[i] < student_scores[count]:
+        max = student_scores[count]
+        student_scores[i] = student_scores[count]
+        count = count + 1
+
+    else:
+        print("they are equal")
+print(f"the max number is {max}")
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+better solution
+/////////////////////////////////////////////////////////////////////////////////////
+
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+
+high = 0
+for score in student_scores:
+    if score > high:
+        high = score
+print(f"the highest score is {high}")

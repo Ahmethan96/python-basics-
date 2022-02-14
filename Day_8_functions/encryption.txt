@@ -1,0 +1,18 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+new_alphabet = []
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+# change = 26 - shift
+# def encrypt(text, shift):
+value = 0
+for i in range(len(alphabet)):
+    new = alphabet[i-21]
+    new_alphabet += new
+    x = (" ".join(new_alphabet))
+print(x)
+for j in range(len(new_alphabet)):
+    print(j, end=" ")
+    if text[value] == new_alphabet[j]:
+        print(new_alphabet[j])
+        value += value

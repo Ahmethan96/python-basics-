@@ -1,0 +1,72 @@
+Date: 19/01/2022
+
+import random
+lis = []
+for i in range(0, 101):
+    lis.append(i)
+x = random.choice(lis)
+print(f"pissit the number is {x}")
+
+def easy():
+    hard = 9
+    print("you have 10 attempts to guess a number")
+    w = int(input("Make a guess: "))
+    while hard != 0:
+        if w > x:
+            print("too high")
+            print("try again")
+            hard = hard - 1
+            print(f"you have {hard + 1} attempts to guess a number")
+            w = int(input("Make a guess: "))
+            if hard == 0:
+                print("you have out of the guesses you lose")
+
+        elif w < x:
+            print("too low")
+            print("try again")
+            hard = hard - 1
+            print(f"you have {hard + 1} attempts to guess a number")
+            w = int(input("Make a guess: "))
+            if hard == 0:
+                print("you have out of the guesses you lose")
+
+        elif w == x:
+            print(f"you got it the answer was {w}")
+            hard = 0
+    return w
+
+def hard():
+    hard = 4
+    print("you have 5 attempts to guess a number")
+    z = int(input("Make a guess: "))
+    while hard != 0:
+        if z > x:
+            print("too high")
+            print("try again")
+            hard = hard - 1
+            print(f"you have {hard + 1} attempts to guess a number")
+            z = int(input("Make a guess: "))
+            if hard == 0:
+                print("you have out of the guesses you lose")
+
+        elif z < x:
+            print("too low")
+            print("try again")
+            hard = hard - 1
+            print(f"you have {hard + 1} attempts to guess a number")
+            z = int(input("Make a guess: "))
+            if hard == 0:
+                print("you have out of the guesses you lose")
+
+        elif z == x:
+            print(f"you got it the answer was {z}")
+            hard = 0
+    return z
+
+def game():
+        i = input(("Choose a difficulty. type 'easy' or 'hard'"))
+        if i == "easy":
+            easy()
+        elif i == "hard":
+            hard()
+game()
