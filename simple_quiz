@@ -38,3 +38,17 @@ print("b: " + b)
 
 #5. Make sure the input cursor shows on a new line, see the example at:
 #   https://replit.com/@appbrewery/band-name-generator-end
+
+
+#########################################################################
+
+# 🚨 Don't change the code below 👇
+two_digit_number = input("Type a two digit number: ")
+# 🚨 Don't change the code above 👆
+
+####################################
+#Write your code below this line 👇
+
+
+#######################################################################
+
