@@ -84,3 +84,34 @@ age = input("What is your current age?")
 
 
 ################################################################################
+
+
+
+## love calculator game
+
+name1 = input("what is your name? \n")
+name2 = input("what is their name? \n")
+
+ibo = name1.count("t") + name1.count("r") + name1.count("u") + name1.count("e")
+sue = name2.count("t") + name2.count("r") + name2.count("u") + name2.count("e")
+ibo1 = name1.count("l") + name1.count("o") + name1.count("v") + name1.count("e")
+sue1 = name2.count("l") + name2.count("o") + name1.count("v") + name1.count("e")
+print(ibo)
+print(sue)
+
+calc = ibo + sue
+calc2 = ibo1 + sue1
+calc_1 = str(calc)
+calc_2 = str(calc2)
+new = calc_1 + calc_2
+print(calc)
+print(calc2)
+print(f"updated value is {new}")
+print(type(new))
+
+if int(new) < 10 or int(new) > 90:
+    print(f"your score is {new}, you go together like coke and mentos")
+elif int(new) >= 40 or int(new) <= 50:
+    print(f" your score is {new} alright together ")
+else:
+    print(f"your scor is {new}")
