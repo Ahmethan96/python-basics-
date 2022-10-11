@@ -126,3 +126,14 @@ print(x)
 
 ####################################################### 
 
+student_scores = input("input a list of student scores: ").split()
+
+for i in range(len(student_scores)):
+    student_scores[i] = int(student_scores[i])
+
+great = 0
+
+for j in range(len(student_scores)):
+    if student_scores[j]> great:
+        great = student_scores[j]
+print(f"the greatest score is {great}")
