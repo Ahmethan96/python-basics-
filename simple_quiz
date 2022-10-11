@@ -115,3 +115,14 @@ elif int(new) >= 40 or int(new) <= 50:
     print(f" your score is {new} alright together ")
 else:
     print(f"your scor is {new}")
+########################################################
+
+
+txt = "welcome to the jungle"
+
+x = txt.split()
+
+print(x)
+
+####################################################### 
+
