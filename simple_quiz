@@ -167,3 +167,99 @@ for s in range(nr_numbers):
     print(v, end="")
 
 ################################################################
+
+
+import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+
+word_list = ["aardvark", "baboon", "camel"]
+
+chosen_word = random.choice(word_list)
+print(chosen_word)
+ibo = []
+for i in range(len(chosen_word)):
+    ibo += "_"
+
+flag = True
+lives = len(stages) - 1
+number = 0
+while flag:
+
+        guess = input("please guess a letter: ")
+
+        for j in range(len(chosen_word)):
+            if chosen_word[j] == guess:
+                ibo[j] = guess
+
+        if guess not in chosen_word:
+            lives -= 1
+            number += 1
+            print(f" you remaining live is {lives}")
+            print(stages[number])
+
+            if lives == 0:
+                print("game over")
+                flag = False
+        print(ibo)
+
+
+print(lives)
+
+#####################################################################
